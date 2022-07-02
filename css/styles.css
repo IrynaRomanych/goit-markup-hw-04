@@ -192,11 +192,10 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   max-width: 1600px;
-  background-size: contain;
+  background-size: cover;
 }
 .main-title {
   max-width: 696px;
-  margin: 0 auto;
   margin-bottom: 30px;
 
   color: var(--primery-bg-color);
@@ -249,6 +248,11 @@ img {
 
 .benefits-list {
   display: flex;
+  gap: 30px;
+}
+
+.benefits-item {
+  flex-basis: 270px;
 }
 
 .benefits-item:last-child {
@@ -258,14 +262,9 @@ img {
   display: flex;
   width: 270px;
   height: 120px;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 30px;
-  background-position: center;
-  border: none;
   border-radius: 4px;
-  background: #f5f4fa;
+  background-color: #f5f4fa;
   align-items: center;
   justify-content: center;
 }
@@ -414,9 +413,6 @@ img {
 }
 
 .icon-clients {
-  margin: 0;
-  display: flex;
-  fill: var(--icons-color);
   fill: currentcolor;
 }
 .icon-clients:hover,
@@ -426,21 +422,23 @@ img {
 }
 .client-link:hover,
 .client-link:focus {
+  color: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
 
 /* FOOTER */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--hero-footer-background);
 }
 .footer-navigation {
   display: flex;
-  flex-wrap: nowrap;
+  align-items: baseline;
 }
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
-  padding-top: 60px;
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -466,8 +464,6 @@ address {
   color: var(--primery-bg-color);
 }
 
-.footer-main:hover,
-.footer-main:focus,
 .add-footer:hover,
 .add-footer:focus {
   color: var(--accent-color);
@@ -478,18 +474,15 @@ address {
   margin-top: 9px;
 }
 .footer-socials {
-  display: inline-block;
   margin-left: 70px;
 }
 .footer-social-title {
   margin-bottom: 20px;
-  padding-top: 72px;
   color: var(--primery-bg-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: left;
 }
 
 .social-list {
@@ -576,10 +569,11 @@ address {
 /* CARDS COLLECTION */
 
 .portfolio-link {
+  display: block;
   text-decoration: none;
 }
-.item:active,
-.item:hover {
+.portfolio-link:active,
+.portfolio-link:hover {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }

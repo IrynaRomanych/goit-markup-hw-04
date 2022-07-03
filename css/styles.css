@@ -196,6 +196,7 @@ img {
 }
 .main-title {
   max-width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
 
   color: var(--primery-bg-color);
